@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="basket dashboard" content = "index">
   <meta name="author" content="Andrew Cohen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="..\js\tabs.js"></script>
+  <link rel="stylesheet" href="..\css\styles.css">
   <title>Basket</title>
 </head>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width=100% height=1000 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FumBDWx4401QqzMv45pAsIt%2FBASKET%253A-Cart-Modules%3Fnode-id%3D174%253A635" allowfullscreen>
-</iframe>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width=100% height=1000 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FumBDWx4401QqzMv45pAsIt%2FBASKET%253A-Cart-Modules%3Fnode-id%3D174%253A635" allowfullscreen></iframe>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+
+
