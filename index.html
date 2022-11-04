@@ -8,7 +8,7 @@
   <meta name="author" content="Andrew Cohen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="..\js\tabs.js"></script>
-  <link rel="stylesheet" href="..\css\styles.css">
+  <link rel="stylesheet" href="\css\styles.css">
   <title>Basket</title>
 </head>
 
@@ -19,7 +19,7 @@
 
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
-  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width=100% height=1000 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FumBDWx4401QqzMv45pAsIt%2FBASKET%253A-Cart-Modules%3Fnode-id%3D174%253A635" allowfullscreen></iframe>
+  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width=100% height=800 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FumBDWx4401QqzMv45pAsIt%2FBASKET%253A-Cart-Modules%3Fnode-id%3D174%253A635" allowfullscreen></iframe>
 </div>
 
 <div id="News" class="tabcontent">
@@ -38,6 +38,26 @@
 </div>
 
 <script>
+  function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 </script>
